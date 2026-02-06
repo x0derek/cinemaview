@@ -6,35 +6,53 @@ body{
     background: var(--fbgdark);
     min-height: 100vh;
     color: var(--fwhite);
-    margin: 0;
+    margin: 0 1.5%;
     padding: 0;
     box-sizing: border-box;
 }
-
+#news, #repertuar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#title{
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--fwhite);
+    margin-top: 20px;
+    text-shadow: 3px 5px 10px var(--fprimary);
+}
+#nazwa{
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--fwhite);
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+#nazwa:hover{
+    text-shadow: 3px 5px 10px var(--fprimary);
+    font-size: 22px;
+    transition: 0.2s ease;
+}
 nav{
     color: var(--fwhite);
-    background-color: var(--fgray);
+    background-color: var(--fnav);
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-nav a.logo img{
-    display: block;
-    transition: 0.2s ease;
-}
-nav a.logo img:hover{
-    height: 60px;
-    width: 60px;
 }
 nav ul{
     display: flex;
     justify-content: flex-end;
     list-style-type: none;
+    transition: 0.2s ease;
 }
 nav ul li{
-    margin: 0.15px;
+    margin: 0.25px;
     text-align: center;
-    display: block;
+    display: flex;
+    align-items: center;
+    transition: 0.2s ease;
 }
 nav ul li > *{
     color: #FFFDFA;
@@ -42,9 +60,9 @@ nav ul li > *{
     text-align: center;
     text-decoration: none;
     font-size: 16px;
+    transition: 0.2s ease;
 }
 nav ul li a:hover{
-    background-color: #343434;
     color: #fefefe;
     font-size: 18px;
     transition: 0.2s ease;
@@ -54,10 +72,12 @@ nav ul li a:active{
     background-color: #343434;
     color: #e175bd;
     font-size: 18px;
+    transition: 0.2s ease;
 }
 nav ul li span.nav-username{
     font-weight: bold;
     padding: 0px;
     margin-left: 10px;
     color: #7f04ab;
+    transition: 0.2s ease;
 }

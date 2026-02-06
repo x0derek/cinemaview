@@ -7,9 +7,9 @@
     --fdark: #26024a;/*Ciemny fiolet*/
     --flighter: #eddcff;/*Bardzo jasny fiolet*/
     --flight: #e0c2ff;/*Jasny fiolet*/
-    --fgray: #b3a1c6;/*Szary fiolet*/
+    --fnav: linear-gradient(35deg, #331800, #a35b18);/*Gradient dla nawigacji*/
     --fprimary: #68359f;/*Główny kolor*/
-    --fhover: #4b2970;/*Hover*/
+    --fhover: #190e25;/*Hover*/
 
     /*=-=-=-=-=-=POMARAŃCZOWY=-=-=-=-=-=*/
     --obgdark: linear-gradient(35deg, #331800, #a35b18);/*Tło (pomarańcz)*/

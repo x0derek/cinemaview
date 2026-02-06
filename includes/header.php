@@ -10,8 +10,8 @@ session_start(); ?>
 </head>
 <body>
 <nav>
+    <a href="index.php" id="nazwa">CinemaView</a>
     <ul>
-        <li><a href="index.php">Strona główna</a></li>
         <?php if(isset($_SESSION['username'])): ?>
             <li><a href="profile.php">Profil (<?php echo htmlspecialchars($_SESSION['username']); ?>)</a></li>
             <li><a href="logout.php">Wyloguj się</a></li>
