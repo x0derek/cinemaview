@@ -1,7 +1,7 @@
 <?php
 $server = "localhost";
-$user = "root";
-$pass = "";
+$user = "echo";
+$pass = "iGYjNG3ghbQnK8u";
 $base = "echo";
 
 try{

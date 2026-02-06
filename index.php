@@ -1,24 +1,49 @@
-<?php 
-include 'includes/header.php';
-?>
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strona główna kino</title>
+</head>
+<body>
+    <header>
+        <h1>Kino przykładowy tekst</h1>
+    </header>
+    <p>tutaj nawigacja</p>
+    <main>
+        <p>Najwyżej oceniane filmy</p>
+    </main>
+    <section>
+        <section>
+           <?php
+                include 'includes/header.php';
 
-Strona główna
+                $conn = new mysqli($host, $user, $password, $dbname);
 
-<?php
-$result = $conn->query("SELECT id, title FROM films");
-$filmy = $result->fetch_all(MYSQLI_ASSOC);
-?>
+                if ($conn->connect_error) {
+                    die("Błąd połączenia: " . $conn->connect_error);
+                }
 
-<h1>Lista filmów</h1>
+                $sql = "SELECT id, title FROM films ORDER BY title ASC";
 
-<ul>
-<?php foreach ($filmy as $film): ?>
-    <li>
-        <a href="film.php?id=<?= $film['id'] ?>">
-            <?= htmlspecialchars($film['title']) ?>
-        </a>
-    </li>
-<?php endforeach; ?>
-</ul>
+                $result = $conn->query($sql);
 
-<?php include 'includes/footer.php'; ?>
+                if ($result->num_rows > 0) {
+                    while ($film = $result->fetch_assoc()) {
+                        echo '<div class="film-container">';
+                        echo '<h3>' . htmlspecialchars($film["title"]) . '</h3>';
+                        echo '<a href="filmy.php" class="przycisk_kup">Kup bilet</a>';
+                        echo '</div>';
+                    }
+                } else {
+                    echo "<p>Brak filmów w bazie.</p>";
+                }
+
+                $conn->close();
+            ?>
+
+</section>
+
+    </section>
+</body>
+</html>
