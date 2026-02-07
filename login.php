@@ -1,4 +1,4 @@
-<?php include 'includes/header.php';
+<?php require 'includes/header.php';
 if(isset($_SESSION['username'])){
         header('Location: index.php');
         exit;
@@ -40,16 +40,8 @@ if(isset($_SESSION['username'])){
             <label for="">Hasło:</label>
             <input type="password" name="password" id="password" required><br>
 
-<<<<<<< HEAD
-        <input type="submit" value="Zaloguj">
-    </form>
-    </div>
-    </div>
-<?php include 'includes/footer.php'; ?>
-=======
             <input type="submit" value="Zaloguj">
         </form>
     </div>
 </div>
 <?php require 'includes/footer.php';?>
->>>>>>> 9063b60 (Zaktualizowano styl logowania/rejestracji, dodano styl scrollbara, naprawiono błędy)
