@@ -9,5 +9,6 @@ $username = $_SESSION['username'];
 ?>
 
 <h1>Profil użytkownika: <?= htmlspecialchars($username) ?></h1>
+<p>tet</p>
 
 <?php require 'includes/footer.php';?>
