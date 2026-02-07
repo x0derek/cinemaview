@@ -77,6 +77,35 @@ nav ul li span.nav-username{
   transition: 0.2s ease;
 }
 
+/*slider*/
+.slider {
+    width: 100%;
+    max-width: 900px;
+    height: 450px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.slides {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 1s ease;
+}
+
+.slide {
+    min-width: 100%;
+    height: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
 /*logowanie/rejestracja*/
 .srodek {
   border: 2px solid var(--flight);
@@ -151,6 +180,7 @@ nav ul li span.nav-username{
 
 /*footer*/
 .site-footer {
+  justify-content: center;
   border: 2px solid var(--olight);
   box-shadow: 6px 10px 10px var(--oshadow);
   border-radius: 35px;
