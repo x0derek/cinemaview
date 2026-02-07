@@ -1,6 +1,4 @@
-<?php 
-include 'includes/header.php';
-
+<?php require 'includes/header.php';
 if (!isset($_GET['id'])) {
     die("Brak ID filmu");
 }
@@ -24,3 +22,4 @@ if (!$film) {
 <p><?= nl2br(htmlspecialchars($film['description'])) ?></p>
 
 <a href="index.php">← wróć do listy</a>
+<? require 'includes/footer.php';?>

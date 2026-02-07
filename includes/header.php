@@ -1,5 +1,4 @@
-<?php include("conn.php");
-session_start(); ?>
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -7,8 +6,6 @@ session_start(); ?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
 <nav>
     <ul>
         <li><a href="index.php">Strona główna</a></li>
@@ -21,3 +18,11 @@ session_start(); ?>
         <?php endif; ?>
     </ul>
 </nav>
+<?php
+try{
+    $conn = mysqli_connect('localhost', 'echo', 'iGYjNG3ghbQnK8u', '');
+} catch (Exception $e){
+    die ("Połączenie nie powiodło się. ". $e->getMessage());
+}
+?>
+</head>

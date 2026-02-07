@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import "colors.css";
+
+body{
+    font-family: Noto Sans;
+    background: var(--fbgdark);
+    min-height: 100vh;
+    color: var(--fwhite);
+    margin: 0 1.5%;
+    padding: 0;
+    box-sizing: border-box;
+}
+#news, #repertuar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#title{
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--fwhite);
+    margin-top: 20px;
+    text-shadow: 3px 5px 10px var(--fprimary);
+}
+#nazwa{
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--fwhite);
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+#nazwa:hover{
+    text-shadow: 3px 5px 10px var(--fprimary);
+    font-size: 22px;
+    transition: 0.2s ease;
+}
+nav{
+    color: var(--fwhite);
+    background-color: var(--fnav);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav ul{
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+    transition: 0.2s ease;
+}
+nav ul li{
+    margin: 0.25px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    transition: 0.2s ease;
+}
+nav ul li > *{
+    color: #FFFDFA;
+    padding: 14px 15px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.2s ease;
+}
+nav ul li a:hover{
+    color: #fefefe;
+    font-size: 18px;
+    transition: 0.2s ease;
+}
+nav ul li a:active{
+    transition: none;
+    background-color: #343434;
+    color: #e175bd;
+    font-size: 18px;
+    transition: 0.2s ease;
+}
+nav ul li span.nav-username{
+    font-weight: bold;
+    padding: 0px;
+    margin-left: 10px;
+    color: #7f04ab;
+    transition: 0.2s ease;
+}
+.site-footer {
+  background-color: #111;
+  color: #ccc;
+  padding: 40px 20px 20px;
+  font-family: Arial, sans-serif;
+  margin: 0px !important;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-column h4 {
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 8px;
+}
+
+.footer-column a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.footer-column a:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 14px;
+  color: #777;
+  border-top: 1px solid #222;
+  padding-top: 15px;
+}
