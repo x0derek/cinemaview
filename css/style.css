@@ -2,96 +2,167 @@
 @import "colors.css";
 
 body{
-    font-family: Noto Sans;
-    background: var(--fbgdark);
-    min-height: 100vh;
-    color: var(--fwhite);
-    margin: 0 1.5%;
-    padding: 0;
-    box-sizing: border-box;
+  font-family: Noto Sans;
+  background: var(--fbgdark);
+  min-height: 100vh;
+  color: var(--fwhite);
+  margin: 0 1.5%;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
 }
-#news, #repertuar{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+#main{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-#title{
-    font-size: 24px;
-    font-weight: bold;
-    color: var(--fwhite);
-    margin-top: 20px;
-    text-shadow: 3px 5px 10px var(--fprimary);
-}
+/*nawigacja*/
 #nazwa{
-    font-size: 20px;
-    font-weight: bold;
-    color: var(--fwhite);
-    text-decoration: none;
-    transition: 0.2s ease;
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--fwhite);
+  text-decoration: none;
+  transition: 0.2s ease;
 }
 #nazwa:hover{
-    text-shadow: 3px 5px 10px var(--fprimary);
-    font-size: 22px;
-    transition: 0.2s ease;
+  text-shadow: 3px 5px 10px var(--oprimary);
+  font-size: 22px;
+  transition: 0.2s ease;
 }
 nav{
-    color: var(--fwhite);
-    background-color: var(--fnav);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  color: var(--fwhite);
+  background-color: var(--fnav);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 nav ul{
-    display: flex;
-    justify-content: flex-end;
-    list-style-type: none;
-    transition: 0.2s ease;
+  display: flex;
+  justify-content: flex-end;
+  list-style-type: none;
+  transition: 0.2s ease;
 }
 nav ul li{
-    margin: 0.25px;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    transition: 0.2s ease;
+  margin: 0.25px;
+  text-align: center;
+  display: flex;
+  transition: 0.2s ease;
 }
 nav ul li > *{
-    color: #FFFDFA;
-    padding: 14px 15px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-    transition: 0.2s ease;
+  color: var(--fwhite);
+  padding: 14px 15px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  transition: 0.2s ease;
 }
 nav ul li a:hover{
-    color: #fefefe;
-    font-size: 18px;
-    transition: 0.2s ease;
+  font-size: 18px;
+  text-shadow: 3px 5px 10px var(--oprimary);
+  transition: 0.2s ease;
 }
 nav ul li a:active{
-    transition: none;
-    background-color: #343434;
-    color: #e175bd;
-    font-size: 18px;
-    transition: 0.2s ease;
+  transition: none;
+  text-shadow: 3px 5px 10px var(--oprimary);
+  font-size: 18px;
+  transition: 0.2s ease;
 }
 nav ul li span.nav-username{
-    font-weight: bold;
-    padding: 0px;
-    margin-left: 10px;
-    color: #7f04ab;
-    transition: 0.2s ease;
+  font-weight: bold;
+  padding: 0px;
+  margin-left: 10px;
+  color: #7f04ab;
+  transition: 0.2s ease;
 }
+
+/*logowanie/rejestracja*/
+.srodek {
+  border: 2px solid var(--flight);
+  box-shadow: 6px 10px 10px var(--fprimary);
+  border-radius: 35px;
+  color: var(--fwhite);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 30px;
+  width: 40%;
+  max-width: 500px;
+  height: auto;
+  margin: 50px auto;
+  text-align: center;
+  text-shadow: 4px 4px 5px var(--fprimary);
+}
+
+.reglog {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  width: 100%;
+  gap: 15px;
+}
+
+.reglog input {
+  margin-bottom: 5%;
+  margin-top: 2%;
+  width: 90%;
+  padding: 10px 15px;
+  border-radius: 15px;
+  border: 2px solid var(--fprimary);
+  background-color: var(--fbgdark);
+  color: var(--fwhite);
+  font-size: 16px;
+  transition: 0.2s ease;
+}
+
+.reglog input:focus {
+  outline: none;
+  border-color: var(--oprimary);
+  box-shadow: 0 0 10px var(--oprimary);
+}
+
+.reglog label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  width: 90%;
+  text-align: left;
+}
+
+.reglog button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 20px;
+  background-color: var(--oprimary);
+  color: var(--fwhite);
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.2s ease;
+  width: 50%;
+}
+
+.reglog button:hover {
+  box-shadow: 0 0 10px var(--oprimary);
+  transform: scale(1.05);
+}
+
+/*footer*/
 .site-footer {
-  background-color: #111;
-  color: #ccc;
+  border: 2px solid var(--olight);
+  box-shadow: 6px 10px 10px var(--oshadow);
+  border-radius: 35px;
+  color: var(--fwhite);
   padding: 40px 20px 20px;
-  font-family: Arial, sans-serif;
-  margin: 0px !important;
+  margin: 3% 0%;
 }
 
 .footer-container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   gap: 40px;
   max-width: 1200px;
   margin: 0;
@@ -103,7 +174,7 @@ nav ul li span.nav-username{
 }
 
 .footer-column h4 {
-  color: #fff;
+  color: var(--fwhite);
   margin-bottom: 15px;
 }
 
@@ -118,24 +189,25 @@ nav ul li span.nav-username{
 }
 
 .footer-column a {
-  color: #ccc;
+  font-size: 15.5px;
+  color: var(--fwhite);
   text-decoration: none;
+  transition: 0.2s ease;
 }
 
 .footer-column a:hover {
-  color: #fff;
+   font-size: 16px;
+  text-shadow: 3px 5px 5px var(--oprimary);
+  transition: 0.2s ease;
 }
 
 .footer-bottom {
   text-align: center;
   margin-top: 30px;
   font-size: 14px;
-  color: #777;
-  border-top: 1px solid #222;
+  color: var(--fwhite);
+  border-top: 1px solid var(--olighter);
   padding-top: 15px;
-<<<<<<< HEAD
-}
-=======
 }
 
 /*scrollbar*/
@@ -154,4 +226,3 @@ nav ul li span.nav-username{
   border-radius: 6px;
 }
 
->>>>>>> a2564c4 (Zaktualizowano kolor  scrollbara)

@@ -1,4 +1,7 @@
 <?php require 'includes/header.php';
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 if(isset($_SESSION['username'])){
         header('Location: index.php');
         exit;
@@ -15,7 +18,7 @@ if(isset($_SESSION['username'])){
         if($password !== $confirmPassword){
             $error = "Hasła różnią się.";
         } else{
-            $sql = "SELECT * FROM users WHERE username = '$username'";
+            $sql = "SELECT * FROM Users WHERE username = '$username'";
             $result = mysqli_query($conn, $sql);
             if(mysqli_num_rows($result) > 0){
                 $error = "Nazwa użytkownika jest zajęta.";
@@ -61,4 +64,4 @@ if(isset($_SESSION['username'])){
         </form>
     </div>
 </div>
-<? require 'includes/footer.php';?>
+<?php require 'includes/footer.php';?>

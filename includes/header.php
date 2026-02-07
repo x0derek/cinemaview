@@ -1,4 +1,4 @@
-<?php session_start(); ?>
+<?php session_start();?>
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -7,8 +7,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
 <nav>
+    <a href="index.php" id="nazwa">CinemaView</a>
     <ul>
-        <li><a href="index.php">Strona główna</a></li>
         <?php if(isset($_SESSION['username'])): ?>
             <li><a href="profile.php">Profil (<?php echo htmlspecialchars($_SESSION['username']); ?>)</a></li>
             <li><a href="logout.php">Wyloguj się</a></li>
@@ -24,5 +24,8 @@ try{
 } catch (Exception $e){
     die ("Połączenie nie powiodło się. ". $e->getMessage());
 }
+mysqli_set_charset($conn, "utf8mb4");
+
 ?>
 </head>
+<div id="main">

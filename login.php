@@ -8,7 +8,7 @@ if(isset($_SESSION['username'])){
         $username = mysqli_real_escape_string($conn, $_POST["username"]);
         $password = mysqli_real_escape_string($conn, $_POST["password"]);
         
-        $sql = "SELECT * FROM users WHERE username = '$username'";
+        $sql = "SELECT * FROM Users WHERE username = '$username'";
         $result = mysqli_query($conn, $sql);
             if(mysqli_num_rows($result) < 0){
                 $error = "Nazwa użytkownika nie istnieje.";
@@ -21,7 +21,7 @@ if(isset($_SESSION['username'])){
                     header("Location: index.php");
                     exit;
             } else{
-                $error = "Niepoprawne hasło.";
+                $error = "Niepoprawne hasSło.";
             }
 
 
@@ -32,16 +32,16 @@ if(isset($_SESSION['username'])){
     ?>
 <div class="srodek">
     <h1>Logowanie</h1>
-    <form action="" method="POST">
-        <div class="reglog">
-        <label for="">Nazwa użytkownika:</label>
-        <input type="text" name="username", id="username" required><br>
+    <div class="reglog">
+        <form action="" method="POST">
+            <label for="">Nazwa użytkownika:</label>
+            <input type="text" name="username", id="username" required><br>
 
-        <label for="">Hasło:</label>
-        <input type="password" name="password" id="password" required><br>
+            <label for="">Hasło:</label>
+            <input type="password" name="password" id="password" required><br>
 
-        <input type="submit" value="Zaloguj">
-        </div>
-    </form>
+            <input type="submit" value="Zaloguj">
+        </form>
+    </div>
 </div>
-<? require 'includes/footer.php';?>
+<?php require 'includes/footer.php';?>
