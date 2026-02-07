@@ -222,7 +222,7 @@ nav ul li span.nav-username{
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--oprimary);
+  background: var(--obgdark);
   border-radius: 6px;
 }
 
