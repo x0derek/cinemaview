@@ -1,4 +1,4 @@
-<?php include 'includes/header.php';
+<?php require 'includes/header.php';
 if(isset($_SESSION['username'])){
         header('Location: index.php');
         exit;
@@ -41,7 +41,7 @@ if(isset($_SESSION['username'])){
         <input type="password" name="password" id="password" required><br>
 
         <input type="submit" value="Zaloguj">
+        </div>
     </form>
-    </div>
-    </div>
-<?php include 'includes/footer.php'; ?>
+</div>
+<? require 'includes/footer.php';?>
