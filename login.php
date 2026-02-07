@@ -32,16 +32,16 @@ if(isset($_SESSION['username'])){
     ?>
 <div class="srodek">
     <h1>Logowanie</h1>
-    <form action="" method="POST">
-        <div class="reglog">
-        <label for="">Nazwa użytkownika:</label>
-        <input type="text" name="username", id="username" required><br>
+    <div class="reglog">
+        <form action="" method="POST">
+            <label for="">Nazwa użytkownika:</label>
+            <input type="text" name="username", id="username" required><br>
 
-        <label for="">Hasło:</label>
-        <input type="password" name="password" id="password" required><br>
+            <label for="">Hasło:</label>
+            <input type="password" name="password" id="password" required><br>
 
-        <input type="submit" value="Zaloguj">
-        </div>
-    </form>
+            <input type="submit" value="Zaloguj">
+        </form>
+    </div>
 </div>
 <?php require 'includes/footer.php';?>
