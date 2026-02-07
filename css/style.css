@@ -185,21 +185,20 @@ nav ul li span.nav-username{
   box-shadow: 6px 10px 10px var(--oshadow);
   border-radius: 35px;
   color: var(--fwhite);
-  padding: 40px 20px 20px;
+  padding: 3%;
   margin: 3% 0%;
 }
 
 .footer-container {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
-  gap: 40px;
-  max-width: 1200px;
-  margin: 0;
+  flex-wrap: nowrap;
+  gap: 20px;
 }
 
 .footer-column {
   flex: 1;
+  text-align: left;
   min-width: 200px;
 }
 
@@ -226,7 +225,7 @@ nav ul li span.nav-username{
 }
 
 .footer-column a:hover {
-   font-size: 16px;
+  font-size: 16px;
   text-shadow: 3px 5px 5px var(--oprimary);
   transition: 0.2s ease;
 }
@@ -239,6 +238,7 @@ nav ul li span.nav-username{
   border-top: 1px solid var(--olighter);
   padding-top: 15px;
 }
+
 
 /*scrollbar*/
 ::-webkit-scrollbar {
