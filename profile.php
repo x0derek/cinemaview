@@ -10,4 +10,4 @@ $username = $_SESSION['username'];
 
 <h1>Profil użytkownika: <?= htmlspecialchars($username) ?></h1>
 
-<? require 'includes/footer.php';?>
+<?php require 'includes/footer.php';?>

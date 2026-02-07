@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-<div id="info"></div>
-
-</body>
-=======
+</div>
 <footer class="site-footer">
   <div class="footer-container">
     
@@ -37,8 +33,7 @@
   </div>
 
   <div class="footer-bottom">
-    © 2026 Nazwa Strony. Wszelkie prawa zastrzeżone.
+    © 2026 CinemaView. Wszelkie prawa zastrzeżone.
   </div>
 </footer>
->>>>>>> 59f6db2 (Zaktualizowano pliki PHP)
 </html>

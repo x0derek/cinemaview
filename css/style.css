@@ -9,18 +9,11 @@ body{
     margin: 0 1.5%;
     padding: 0;
     box-sizing: border-box;
-}
-#news, #repertuar{
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
-#title{
-    font-size: 24px;
-    font-weight: bold;
-    color: var(--fwhite);
-    margin-top: 20px;
-    text-shadow: 3px 5px 10px var(--fprimary);
+#main{
+    flex: 1;
 }
 #nazwa{
     font-size: 20px;
@@ -30,7 +23,7 @@ body{
     transition: 0.2s ease;
 }
 #nazwa:hover{
-    text-shadow: 3px 5px 10px var(--fprimary);
+    text-shadow: 3px 5px 10px var(--oprimary);
     font-size: 22px;
     transition: 0.2s ease;
 }
@@ -51,11 +44,10 @@ nav ul li{
     margin: 0.25px;
     text-align: center;
     display: flex;
-    align-items: center;
     transition: 0.2s ease;
 }
 nav ul li > *{
-    color: #FFFDFA;
+    color: var(--fwhite);
     padding: 14px 15px;
     text-align: center;
     text-decoration: none;
@@ -63,14 +55,13 @@ nav ul li > *{
     transition: 0.2s ease;
 }
 nav ul li a:hover{
-    color: #fefefe;
     font-size: 18px;
+    text-shadow: 3px 5px 10px var(--oprimary);
     transition: 0.2s ease;
 }
 nav ul li a:active{
     transition: none;
-    background-color: #343434;
-    color: #e175bd;
+    text-shadow: 3px 5px 10px var(--oprimary);
     font-size: 18px;
     transition: 0.2s ease;
 }
@@ -81,14 +72,14 @@ nav ul li span.nav-username{
     color: #7f04ab;
     transition: 0.2s ease;
 }
-<<<<<<< HEAD
-=======
 .site-footer {
-  background-color: #111;
-  color: #ccc;
+  border: 2px solid var(--olight);
+  box-shadow: 6px 10px 10px var(--oshadow);
+  border-radius: 35px;
+  color: var(--fwhite);
   padding: 40px 20px 20px;
   font-family: Arial, sans-serif;
-  margin: 0px !important;
+  margin: 3% 0%;
 }
 
 .footer-container {
@@ -105,7 +96,7 @@ nav ul li span.nav-username{
 }
 
 .footer-column h4 {
-  color: #fff;
+  color: var(--fwhite);
   margin-bottom: 15px;
 }
 
@@ -120,20 +111,23 @@ nav ul li span.nav-username{
 }
 
 .footer-column a {
-  color: #ccc;
+  font-size: 15.5px;
+  color: var(--fwhite);
   text-decoration: none;
+  transition: 0.2s ease;
 }
 
 .footer-column a:hover {
-  color: #fff;
+   font-size: 16px;
+    text-shadow: 3px 5px 5px var(--oprimary);
+    transition: 0.2s ease;
 }
 
 .footer-bottom {
   text-align: center;
   margin-top: 30px;
   font-size: 14px;
-  color: #777;
-  border-top: 1px solid #222;
+  color: var(--fwhite);
+  border-top: 1px solid var(--olighter);
   padding-top: 15px;
 }
->>>>>>> 59f6db2 (Zaktualizowano pliki PHP)

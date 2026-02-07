@@ -26,3 +26,4 @@ try{
 }
 ?>
 </head>
+<div id="main">

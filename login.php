@@ -44,4 +44,4 @@ if(isset($_SESSION['username'])){
         </div>
     </form>
 </div>
-<? require 'includes/footer.php';?>
+<?php require 'includes/footer.php';?>
