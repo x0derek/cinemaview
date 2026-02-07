@@ -20,7 +20,7 @@
 </nav>
 <?php
 try{
-    $conn = mysqli_connect('localhost', 'echo', 'iGYjNG3ghbQnK8u', '');
+    $conn = mysqli_connect('localhost', 'echo', 'iGYjNG3ghbQnK8u', 'echo');
 } catch (Exception $e){
     die ("Połączenie nie powiodło się. ". $e->getMessage());
 }

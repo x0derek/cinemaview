@@ -133,4 +133,25 @@ nav ul li span.nav-username{
   color: #777;
   border-top: 1px solid #222;
   padding-top: 15px;
+<<<<<<< HEAD
 }
+=======
+}
+
+/*scrollbar*/
+::-webkit-scrollbar {
+  width: 4px; 
+  height: 4px; 
+}
+
+::-webkit-scrollbar-track {
+  background: var(--fdark);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--obgdark);
+  border-radius: 6px;
+}
+
+>>>>>>> a2564c4 (Zaktualizowano kolor  scrollbara)
