@@ -1,12 +1,5 @@
-<<<<<<< HEAD
 <?php session_start(); ?>
-=======
-<?php
-session_start();
-
-?>
-
->>>>>>> 38da492 (Dodanie panelu administracyjnego i wyswietlanie filmow na aktualny dzien)
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -39,10 +32,15 @@ try {
 } catch (Exception $e) {
     die("Połączenie nie powiodło się. " . $e->getMessage());
 }
-<<<<<<< HEAD
-=======
-mysqli_set_charset($conn, "utf8mb4");
->>>>>>> 38da492 (Dodanie panelu administracyjnego i wyswietlanie filmow na aktualny dzien)
 ?>
 
+<div id="main">
+<?php
+try{
+    $conn = mysqli_connect('localhost', 'echo', 'iGYjNG3ghbQnK8u', '');
+} catch (Exception $e){
+    die ("Połączenie nie powiodło się. ". $e->getMessage());
+}
+?>
+</head>
 <div id="main">

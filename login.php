@@ -6,7 +6,6 @@ if(isset($_SESSION['username'])){
     exit;
 }
 
-<<<<<<< HEAD
     if($_SERVER["REQUEST_METHOD"] == "POST"){
         $username = mysqli_real_escape_string($conn, $_POST["username"]);
         $password = mysqli_real_escape_string($conn, $_POST["password"]);
@@ -25,26 +24,6 @@ if(isset($_SESSION['username'])){
                     exit;
             } else{
                 $error = "Niepoprawne hasło.";
-=======
-$error = ''; // zmienna na błąd
-
-if($_SERVER["REQUEST_METHOD"] == "POST"){
-    $username = mysqli_real_escape_string($conn, $_POST["username"]);
-    $password = mysqli_real_escape_string($conn, $_POST["password"]);
-    
-    $sql = "SELECT * FROM Users WHERE username = '$username'";
-    $result = mysqli_query($conn, $sql);
-    
-    if(mysqli_num_rows($result) == 0){
-        $error = "Nazwa użytkownika nie istnieje.";
-    } else {
-        $user = mysqli_fetch_assoc($result);
-        if(password_verify($password, $user["password"])){
-            $_SESSION['logged_in'] = true;
-            $_SESSION['username'] = $user['username'];
-            if($user['is_admin']==1){
-            $_SESSION['is_admin'] = true;
->>>>>>> 38da492 (Dodanie panelu administracyjnego i wyswietlanie filmow na aktualny dzien)
             }
             else{
             $_SESSION['is_admin'] = false;
@@ -75,5 +54,4 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         </form>
     </div>
 </div>
-
 <?php require 'includes/footer.php'; ?>
