@@ -9,6 +9,7 @@
     --flight: #e0c2ff;/*Jasny fiolet*/
     --fnav: linear-gradient(35deg, #331800, #a35b18);/*Gradient dla nawigacji*/
     --fprimary: #68359f;/*Główny kolor*/
+    --fprimlight: #bb7cff;
     --fhover: #190e25;/*Hover*/
 
     /*=-=-=-=-=-=POMARAŃCZOWY=-=-=-=-=-=*/
@@ -20,6 +21,6 @@
     --olighter: #ffd9b4;/*Bardzo jasny pomarańcz*/
     --olight: #fbb570;/*Jasny pomarańcz*/
     --oshadow: #53402d;/*Pomarańczowy dla cieni*/
-    --oprimary: #ff8a00;/*Główny pomarańcz*/
-    --ohover: #d77b11;/*Hover*/
+    --oprimary: #ff8800;/*Główny pomarańcz*/
+    --ohover: #ffa743;/*Hover*/
 }
