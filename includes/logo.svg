@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" xmlns:bx="https://boxy-svg.com">
+  <defs>
+    <bx:export>
+      <bx:file format="svg" path="Bez nazwy.svg"/>
+    </bx:export>
+  </defs>
+  <text style="fill: rgb(54, 114, 12); font-family: Arial, sans-serif; font-size: 28px; paint-order: fill; white-space: pre; transform-box: fill-box; transform-origin: 50% 50.0001%;" transform="matrix(1.474748, 0, 0, 1.427149, -6.134524, 36.854527)" x="262.287" y="286.227">Leszno</text>
+  <path style="fill: none; stroke: rgb(0, 0, 0); stroke-width: 3.791;" d="M 222.218 338.324 L 378.074 336.519"/>
+  <path d="M 252.041 89.273 L 377.111 170.485 L 126.972 170.485 L 252.041 89.273 Z" bx:shape="triangle 126.972 89.273 250.139 81.212 0.5 0 1@4ee277cc" style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0); stroke-width: 3.791;"/>
+  <path style="fill: none; stroke: rgb(0, 0, 0); stroke-width: 3.791;" d="M 375.187 169.583 L 377.112 331.105"/>
+  <text style="fill: rgb(102, 40, 40); font-family: Arial, sans-serif; font-size: 28px; white-space: pre; transform-box: fill-box; transform-origin: 49.5088% 42.0879%;" transform="matrix(1.949829, 0, 0, 3.550907, 59.435562, -73.334991)" x="130.984" y="329.013" dx="-9.55 0 0 0 0 0 0 0 0 4.829" dy="-17.311 0 0 0 0 0 0 0 0 -2.84">CinemaView</text>
+  <path style="fill: none; stroke: rgb(0, 0, 0); stroke-width: 3.791;" d="M 90.413 285.987 L 207.787 321.178 L 155.834 376.223 L 367.491 357.273 L 431.949 294.108 L 430.026 174.997"/>
+</svg>

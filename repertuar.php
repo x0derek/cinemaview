@@ -1,7 +1,5 @@
 <?php require 'includes/header.php';
-
 ?>
-
 <?php $sql = "
 SELECT f.id, title, time, description, banner, 
 d.name AS director, 
@@ -13,19 +11,6 @@ JOIN Genres as g ON f.genre = g.id
 ";
 
 $sql_t = "
-SELECT f.id, title, time, description, banner, cover, TIME_FORMAT(t.date, '%H:%i') AS hour_min, is_available,
-d.name AS director, 
-d.surname AS director2, 
-g.name AS genre
-FROM Films as f
-JOIN Directors as d ON f.director = d.id
-JOIN Genres as g ON f.genre = g.id
-JOIN Tickets as t ON f.id = t.film
-WHERE DATE(t.date) = CURDATE()
-AND t.is_available = 1
-";
-
-$sql_a ="
 SELECT f.id, title, time, description, banner, cover, DATE(t.date) AS only_date , is_available,
 d.name AS director, 
 d.surname AS director2, 
@@ -34,7 +19,6 @@ FROM Films as f
 JOIN Directors as d ON f.director = d.id
 JOIN Genres as g ON f.genre = g.id
 JOIN Tickets as t ON f.id = t.film
-WHERE t.is_available = 1
 ";
 
 $result = mysqli_query($conn, $sql);?>
@@ -50,15 +34,17 @@ $result = mysqli_query($conn, $sql);?>
     </div>
 </section>
 <div id="dzisiaj">
-    <h1 class="category">Grane Dzisiaj</h1>
+    <h1 class="category">Repertuar</h1>
     <section id="filmy">
         <?php $result_t = mysqli_query($conn, $sql_t);
-        while($movie = mysqli_fetch_assoc($result_t)):?>
+        while($movie = mysqli_fetch_assoc($result_t)):
+            if ($movie['is_available'] == 0):?>
             <div class="film">
                 <a href="film.php?id=<?= $movie['id'] ?>">
                 <img src="https://<?= htmlspecialchars($movie['cover']) ?>" alt="<?= htmlspecialchars($movie['title']) ?>">
                 <div>
-                    <h2 class="title"><?= htmlspecialchars($movie['title'])?><br><?= htmlspecialchars($movie['hour_min'])?></h2>
+                    <h2 class="title"><?= htmlspecialchars($movie['title'])?><br>Film aktualnie niedostępny</h2>
+                    
                     <div>
                         <?= $movie['time'] ?> min • <?= htmlspecialchars($movie['genre']) ?><br>
                         Reżyser: <?= htmlspecialchars($movie['director']) ?>
@@ -69,18 +55,13 @@ $result = mysqli_query($conn, $sql);?>
                 </div>
                 </a>
             </div>
-    <?php endwhile; ?>
-    </section>
-
-    <h1 class="category">Proponujemy Także</h1>
-    <section id="filmy">
-        <?php $result_a = mysqli_query($conn, $sql_a);
-        while($movie = mysqli_fetch_assoc($result_a)):?>
+            <?php else:?>
             <div class="film">
                 <a href="film.php?id=<?= $movie['id'] ?>">
                 <img src="https://<?= htmlspecialchars($movie['cover']) ?>" alt="<?= htmlspecialchars($movie['title']) ?>">
                 <div>
                     <h2 class="title"><?= htmlspecialchars($movie['title']) ?><br><?= htmlspecialchars($movie['only_date'])?></h2>
+                    
                     <div>
                         <?= $movie['time'] ?> min • <?= htmlspecialchars($movie['genre']) ?><br>
                         Reżyser: <?= htmlspecialchars($movie['director']) ?>
@@ -91,8 +72,9 @@ $result = mysqli_query($conn, $sql);?>
                 </div>
                 </a>
             </div>
+        <?php endif; ?>
     <?php endwhile; ?>
-        </section>
+    </section>
 </div>
 <script>
 const slides = document.querySelector('.slides');
@@ -107,7 +89,4 @@ setInterval(() => {
     slides.style.transform = `translateX(-${index * 100}%)`;
 }, 4000);
 </script>
-
-
-
 <?php require 'includes/footer.php';?>
